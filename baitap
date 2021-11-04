@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std ;
+
+int add(int , int ) ;
+int sub(int , int ) ;
+int mul(int , int ) ;
+float div(int, int) ;
+
+int add (int a, int b ){
+     return a+b;
+}
+
+int sud (int a, int b){
+     return (a-b);
+}
+
+int mul (int a, int b ){
+     return a*b ;
+}
+
+float div (int a, int b){
+     return ( (float)a/b ) ;
+}
+void menu () {
+     int a,b ;
+     cout << " Nhap a,b" ;
+     cin>> a >> b ;
+     int chon ;
+     do {
+          cout<<"\n========MENU========\n0_ket thuc.\n1_cong hai so ab.\n2_tru hai so ab.\n3_nhan hai so ab.\n4_chia hai so ab.";
+          cout<<"\nChon?" ;
+          cin>> chon ;
+          switch (chon){
+               case 0:break ;
+               case 1:{
+                    cout << "\ncong hai so a+b:"<< add(a,b) ;
+                    break;
+               }
+               case 2:{
+                    cout << "\ntru hai so a-b:" <<sub (a,b) ;
+                    break ;
+               }
+               case 3:{
+                    cout << "\nnhan hai so a*b:" << mul(a,b);
+                    break ;
+               }  
+               case 4:{
+                    cout << "\nchia hai so a/b:" << div (a,b) ;
+                    break ;
+               }
+               default: cout<< "vui long chon lai!" ;
+          }        
+           
+
+     }  while (chon) ;
+}
+int main ()
+
+{
+  menu ();
+  return 0;
+}
+ 
